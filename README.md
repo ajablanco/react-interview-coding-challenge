@@ -18,9 +18,9 @@ You can start editing the project by modifying `pages/index.js` and `pages/profi
 
 The goal of this assessment is to determine how well you're able to ingest API data and turn it into a working web app.
 
-To begin, you'll want to get familiar with the [Github Users API](https://docs.github.com/en/rest/users/users#get-a-user). It is a free and publicly available API which allowing us to request publicly available Github user data. It does not require authentication.
+To begin, you'll want to get familiar with the [Github Users API](https://docs.github.com/en/rest/users/users#get-a-user). It is a free and publicly available API which allows users to request publicly available Github user data. It does not require authentication to use.
 
-Your objective here is to create a navigable, fully-responsive list of Github users in the browser with the visual treatment represented below:
+Your objective in this challenge is to create a navigable, fully-responsive list of Github users in the browser with the visual treatment represented below:
 
 ### Homepage
 
@@ -37,6 +37,10 @@ Since this project is bootstrapped with [Next.js](https://nextjs.org/), you will
 We do not assume you know Next.js but we do assume you understand how routing works. You will want to get familiar with the way Next.js handles routes. More on that can be found in the [routing docs](https://nextjs.org/docs/routing/introduction).
 
 Good luck and happy coding!
+
+## Timeline
+
+How long should this take? Roughly 1 to 2 hours depending on how involved you choose to make it.
 
 ## More About Next.js
 
