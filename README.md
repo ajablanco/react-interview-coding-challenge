@@ -1,3 +1,11 @@
+# Vercel Deployment
+https://react-interview-coding-challenge.vercel.app/
+
+<img width="1419" alt="Screen Shot 2022-08-04 at 2 42 48 PM" src="https://user-images.githubusercontent.com/59661417/182958078-1bb48547-832b-481d-a001-d86f0d813cd1.png">
+
+<img width="1424" alt="Screen Shot 2022-08-04 at 2 42 57 PM" src="https://user-images.githubusercontent.com/59661417/182958093-e7e9f23b-0a20-4bc0-9d46-369e11506ddb.png">
+
+
 # Github User Viewer - An Interview Coding Challenge
 
 This is a basic [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). You have free reign to setup the project in any way you would like. Install as many packages or fonts as you wish. There are no limitations in that regard. The purpose of this exercise is to allow us to get some insight into your coding style, code quality, and organizational skills.
