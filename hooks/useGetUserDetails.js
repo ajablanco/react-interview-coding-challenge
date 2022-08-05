@@ -25,7 +25,7 @@ export default (username) => {
 
   const getThreeUsers = (id) => {
     axios
-      .get(THREE_USERS_API, { params: { since: id } })
+      .get(THREE_USERS_API, { params: { since: id - 2 } })
       .then((response) => {
         const [previous, __, next] = response.data;
         setUserDetails((details) => {

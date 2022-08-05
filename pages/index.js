@@ -40,15 +40,10 @@ export default function Home() {
           {users
             .map((user, id) => (
               <div class="flex w-1/3 justify-center">
-                <UserCard
-                  user={user}
-                  nextUser={users[id + 1]}
-                  prevUser={users[id - 1]}
-                  key={id}
-                />
+                <UserCard user={user} key={id} />
               </div>
             ))
-            .slice(0, 6)}
+            .slice(20, 26)}
         </div>
       </main>
     </>
