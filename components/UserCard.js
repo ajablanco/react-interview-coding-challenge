@@ -1,26 +1,10 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
+import useGetUserDetails from "../hooks/useGetUserDetails";
 import Link from "next/link";
 
-export default function UserCard({ user, nextUser, prevUser }) {
-  const [userDetails, setUserDetails] = useState({});
+export default function UserCard({ user }) {
+  const userDetails = useGetUserDetails(user.login);
 
-  const api = `https://api.github.com/users/${user.login}`;
-
-  const getMoreUserDetails = () => {
-    axios
-      .get(api)
-      .then((response) => {
-        setUserDetails(response.data);
-      })
-      .catch((err) => {
-        console.error("error", err);
-      });
-  };
-
-  useEffect(() => {
-    getMoreUserDetails();
-  }, []);
+  if (!userDetails) return null;
 
   return (
     <>
@@ -36,26 +20,7 @@ export default function UserCard({ user, nextUser, prevUser }) {
             />
             <h3 class="text-center font-bold w-full">{userDetails.name}</h3>
             <h4 class="text-center text-xs w-full">{user.login}</h4>
-            <Link
-              href={{
-                pathname: "/profile",
-                query: {
-                  ...user,
-                  name: userDetails.name,
-                  location: userDetails.location,
-                  bio: userDetails.bio,
-                  followers: userDetails.followers,
-                  following: userDetails.following,
-                  public_gists: userDetails.public_gists,
-                  public_repos: userDetails.public_repos,
-                  company: userDetails.company,
-                  twitter: userDetails.twitter_username,
-                  website: userDetails.blog,
-                  nextUser: nextUser.login,
-                  prevUser: prevUser?.login || null,
-                },
-              }}
-            >
+            <Link href={`/profiles/${userDetails.login}`}>
               <button class="text-center bg-blue-800 text-white m-4 w-32 p-2 rounded-md text-xs">
                 VIEW PROFILE
               </button>
